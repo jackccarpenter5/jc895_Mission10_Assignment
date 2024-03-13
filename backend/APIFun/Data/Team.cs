@@ -1,11 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace APIFun.Models;
 
 public partial class Team
 {
+    [Key]
+    [Required]
     public int TeamId { get; set; }
 
     public string TeamName { get; set; } = null!;

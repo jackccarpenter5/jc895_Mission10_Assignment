@@ -15,12 +15,22 @@ namespace APIFun.Controllers
             _bowlingRepository = temp;
 
         }
-        [HttpGet]
-        public IEnumerable<Bowler> Get()
-        {
-            var bowlerData = _bowlingRepository.Bowlers.ToArray();
+        //[HttpGet]
+        // public IEnumerable<Bowler> Get()
+        //{
+        //    var bowlerData = _bowlingRepository.Bowlers.ToArray();
 
-            return bowlerData;
+        //    return bowlerData;
+        //}
+        [HttpGet]
+        public ActionResult<IEnumerable<Bowler>> GetWithTeams()
+        {
+            var bowlerData = _bowlingRepository.GetAllBowlersWithTeams();
+            if (bowlerData == null || !bowlerData.Any())
+            {
+                return NotFound();
+            }
+            return Ok(bowlerData);
         }
     }
 }

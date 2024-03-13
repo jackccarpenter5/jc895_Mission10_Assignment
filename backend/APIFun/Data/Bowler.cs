@@ -23,9 +23,11 @@ public partial class Bowler
     public string? BowlerZip { get; set; }
 
     public string? BowlerPhoneNumber { get; set; }
+    [ForeignKey("Team")]
     public int? TeamId { get; set; }
+    public Team? Team { get; set; }
 
     public virtual ICollection<BowlerScore> BowlerScores { get; set; } = new List<BowlerScore>();
 
-    public virtual Team? Team { get; set; }
+    //public virtual Team? Team { get; set; }
 }

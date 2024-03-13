@@ -13,6 +13,11 @@ function BowlingList() {
     fetchBowlingData();
   }, []);
 
+  // Filter the bowler data for team names "Marlins" or "Sharks"
+  const filteredBowlerData = bowlerData.filter(
+    (f) => f.teamName === 'Marlins' || f.teamName === 'Sharks',
+  );
+
   return (
     <>
       <div className="row">
@@ -33,17 +38,17 @@ function BowlingList() {
           </tr>
         </thead>
         <tbody>
-          {bowlerData.map((f) => (
-            <tr key={f.bowlerId}>
-              <td>{f.bowlerFirstName}</td>
-              <td>{f.bowlerMiddleInit}</td>
-              <td>{f.bowlerLastName}</td>
-              <td>{f.teamId}</td>
-              <td>{f.bowlerAddress}</td>
-              <td>{f.bowlerCity}</td>
-              <td>{f.bowlerState}</td>
-              <td>{f.bowlerZip}</td>
-              <td>{f.bowlerPhoneNumber}</td>
+          {filteredBowlerData.map((f) => (
+            <tr key={f.id}>
+              <td>{f.firstName}</td>
+              <td>{f.middleInitial}</td>
+              <td>{f.lastName}</td>
+              <td>{f.teamName}</td>
+              <td>{f.address}</td>
+              <td>{f.city}</td>
+              <td>{f.state}</td>
+              <td>{f.zip}</td>
+              <td>{f.phoneNumber}</td>
             </tr>
           ))}
         </tbody>

@@ -125,3 +125,4 @@ C:\Users\jackcarpenter\source\repos\jc895_Mission10_Assignment\backend\APIFun\bi
 C:\Users\jackcarpenter\source\repos\jc895_Mission10_Assignment\backend\APIFun\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\jackcarpenter\source\repos\jc895_Mission10_Assignment\backend\APIFun\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\jackcarpenter\source\repos\jc895_Mission10_Assignment\backend\APIFun\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\jackcarpenter\source\repos\jc895_Mission10_Assignment\backend\APIFun\obj\Debug\net8.0\APIFun.sourcelink.json
